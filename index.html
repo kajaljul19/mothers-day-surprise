@@ -17,7 +17,7 @@
       cursor: none;
 
       overflow: hidden;
-      background: linear-gradient(135deg, #ffd6e7, #fff0f5, #ffe6f2);
+      background: linear-gradient(135deg, #e8bfd0, #f5d3df);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -298,12 +298,19 @@
     button {
         font-size: 1.1rem !important;
         padding: 14px 28px !important;
+
+        position: relative;
+        z-index: 9999;
     }
 
     .floating-hearts,
     .sparkles,
-    .circles {
+    .circles,
+    .balloon,
+    .cloud,
+      span {
         opacity: 0.4;
+        pointer-events: none;
     }
 
     body {
@@ -821,6 +828,11 @@
       transition: 0.8s;
       animation: photoFloat 4s ease-in-out infinite;
     }
+    
+    .photoSlider img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.7);
+}
 
     @keyframes photoFloat {
       0% {
